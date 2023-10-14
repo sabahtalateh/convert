@@ -1,0 +1,12 @@
+package start
+
+type Iface interface {
+    a() string
+}
+
+type A struct {
+    a string
+}
+
+//go:generate convert
+func Convert(a Iface) A {}

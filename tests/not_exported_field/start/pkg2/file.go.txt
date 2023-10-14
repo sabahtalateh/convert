@@ -1,0 +1,10 @@
+package pkg2
+
+import "github.com/sabahtalateh/convert/tests/not_exported_field/work/pkg1"
+
+type Out struct {
+	a int32
+}
+
+//go:generate convert
+func Convert(in *pkg1.In) *Out {}

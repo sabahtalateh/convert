@@ -1,0 +1,5 @@
+package dir1
+
+type Struct1 struct {
+	Field1 string
+}

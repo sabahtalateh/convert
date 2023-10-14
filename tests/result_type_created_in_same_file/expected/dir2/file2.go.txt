@@ -1,0 +1,17 @@
+package dir2
+
+import (
+	"github.com/sabahtalateh/convert/tests/result_type_created_in_same_file/work/dir1"
+)
+
+type Struct2 struct {
+	Field1 string
+}
+
+func Struct2FromStruct1(s1 *dir1.Struct1) *Struct2 {
+	var out *Struct2
+
+	out.Field1 = s1.Field1
+
+	return out
+}

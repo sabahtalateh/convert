@@ -1,0 +1,8 @@
+package dir2
+
+import (
+	"github.com/sabahtalateh/convert/tests/result_type_created_in_same_file/work/dir1"
+)
+
+//go:generate convert
+func Struct2FromStruct1(s1 *dir1.Struct1) *Struct2 {}

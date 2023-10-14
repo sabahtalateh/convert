@@ -1,0 +1,6 @@
+package start
+
+type A struct {}
+
+//go:generate convert
+func Convert(a A) interface{ a() } {}

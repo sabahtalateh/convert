@@ -1,0 +1,81 @@
+package start
+
+type In struct {
+	Bool bool
+	Uint8 uint8
+	Uint16 uint16
+	Uint32 uint32
+	Uint64 uint64
+	Int8 int8
+	Int16 int16
+	Int32 int32
+	Int64 int64
+	Float32 float32
+	Float64 float64
+	Complex64 complex64
+	Complex128 complex128
+	String string
+	Int int
+	Uint uint
+	Uintptr uintptr
+	Byte byte
+	Rune rune
+	SomeStruct *SomeStruct
+}
+
+type SomeStruct struct {}
+
+type Out struct {
+	Bool bool
+	Uint8 uint8
+	Uint16 uint16
+	Uint32 uint32
+	Uint64 uint64
+	Int8 int8
+	Int16 int16
+	Int32 int32
+	Int64 int64
+	Float32 float32
+	Float64 float64
+	Complex64 complex64
+	Complex128 complex128
+	String string
+	Int int
+	Uint uint
+	Uintptr uintptr
+	Byte byte
+	Rune rune
+	SomeStruct *SomeStruct
+}
+
+func Convert(in []*In) []Out {
+	var out []Out
+
+	for _, x := range in {
+		var out2 Out
+		out2.Bool = x.Bool
+		out2.Uint8 = x.Uint8
+		out2.Uint16 = x.Uint16
+		out2.Uint32 = x.Uint32
+		out2.Uint64 = x.Uint64
+		out2.Int8 = x.Int8
+		out2.Int16 = x.Int16
+		out2.Int32 = x.Int32
+		out2.Int64 = x.Int64
+		out2.Float32 = x.Float32
+		out2.Float64 = x.Float64
+		out2.Complex64 = x.Complex64
+		out2.Complex128 = x.Complex128
+		out2.String = x.String
+		out2.Int = x.Int
+		out2.Uint = x.Uint
+		out2.Uintptr = x.Uintptr
+		out2.Byte = x.Byte
+		out2.Rune = x.Rune
+		out2.SomeStruct = x.SomeStruct
+
+		out = append(out, out2)
+	}
+
+	return out
+}

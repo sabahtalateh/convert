@@ -1,0 +1,5 @@
+package pkg1
+
+type In struct {
+	a int32
+}

@@ -1,0 +1,56 @@
+package pkg2
+
+import (
+	"github.com/sabahtalateh/convert/tests/fields_added/work/pkg1"
+	"github.com/sabahtalateh/convert/tests/fields_added/work/pkg3"
+)
+
+type Out struct {
+	Bool *bool
+	Uint8 uint8
+	Uint16 uint16
+	Uint32 uint32
+	Uint64 uint64
+	Int8 int8
+	Int16 int16
+	Int32 int32
+	Int64 int64
+	Float32 float32
+	Float64 float64
+	Complex64 complex64
+	Complex128 complex128
+	String string
+	Int int
+	Uint uint
+	Uintptr uintptr
+	Byte byte
+	Rune rune
+	SomeStruct pkg3.SomeStruct
+}
+
+func Convert(in *pkg1.In) *Out {
+	var out *Out
+
+	out.Bool = &in.Bool
+	out.Uint8 = in.Uint8
+	out.Uint16 = in.Uint16
+	out.Uint32 = in.Uint32
+	out.Uint64 = in.Uint64
+	out.Int8 = in.Int8
+	out.Int16 = in.Int16
+	out.Int32 = in.Int32
+	out.Int64 = in.Int64
+	out.Float32 = in.Float32
+	out.Float64 = in.Float64
+	out.Complex64 = in.Complex64
+	out.Complex128 = in.Complex128
+	out.String = in.String
+	out.Int = in.Int
+	out.Uint = in.Uint
+	out.Uintptr = in.Uintptr
+	out.Byte = in.Byte
+	out.Rune = in.Rune
+	out.SomeStruct = *in.SomeStruct
+
+	return out
+}

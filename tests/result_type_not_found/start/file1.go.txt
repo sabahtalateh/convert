@@ -1,0 +1,8 @@
+package start
+
+type XYZ struct {
+    x string
+}
+
+//go:generate convert
+func Convert(a XYZ) a.B {}

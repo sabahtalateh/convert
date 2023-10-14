@@ -1,0 +1,6 @@
+package start
+
+type In struct {}
+
+//go:generate convert
+func Convert(in *In) *a.Out {}

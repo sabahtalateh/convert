@@ -1,0 +1,4 @@
+package start
+
+//go:generate convert
+func Convert(a string) {}

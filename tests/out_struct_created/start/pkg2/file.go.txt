@@ -1,0 +1,8 @@
+package pkg2
+
+import (
+	"github.com/sabahtalateh/convert/tests/out_struct_created/work/pkg1"
+)
+
+//go:generate convert
+func Convert(in *pkg1.In) *Out {}

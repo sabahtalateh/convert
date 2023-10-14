@@ -1,0 +1,8 @@
+package start
+
+type A struct {}
+
+type B struct {}
+
+//go:generate convert
+func Convert(a []A) *B {}
